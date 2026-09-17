@@ -1,0 +1,12 @@
+# Text files use Git's standard cross-platform line-ending handling.
+* text=auto
+
+# Documents and images must always be treated as binary files.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

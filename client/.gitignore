@@ -1,0 +1,9 @@
+# Language: Git ignore rules | Purpose: Keep generated and private files out of version control.
+node_modules/
+dist/
+*.tsbuildinfo
+.vercel/
+*.log
+.env*
+!.env.example
+.DS_Store

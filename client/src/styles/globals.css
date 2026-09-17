@@ -1,0 +1,518 @@
+/* Language: CSS + Tailwind CSS 4 | Purpose: Global design system, accessibility and animations. */
+@import "tailwindcss";
+
+/* Brand tokens are defined once so the visual identity stays consistent. */
+@theme inline {
+  --color-navy: #063c73;
+  --color-deep-navy: #031f3d;
+  --color-blue: #0875c9;
+  --color-cyan: #18a5d8;
+  --color-gold: #f4b400;
+  --color-ink: #14283a;
+  --color-slate: #607181;
+  --color-line: #dce6ed;
+  --color-mist: #eef5f8;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Base reset and document behaviour. */
+:root {
+  color-scheme: light;
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+::selection {
+  background: #f4b400;
+  color: #031f3d;
+}
+
+/* Shared width and vertical rhythm prevent pages from drifting apart visually. */
+.container-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.section-space {
+  padding-block: clamp(76px, 9vw, 128px);
+}
+.section-title {
+  /* Balanced size for service, process and commercial-section headings. */
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+.eyebrow {
+  color: var(--color-gold);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Keyboard users receive a visible shortcut without affecting the visual layout. */
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  border-radius: 999px;
+  background: #f4b400;
+  color: #031f3d;
+  padding: 10px 18px;
+  font-weight: 800;
+  transition: top 180ms ease;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Buttons use a restrained shine and lift effect for a premium feel. */
+.button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0 24px;
+  font-weight: 800;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.button:focus-visible {
+  outline: 3px solid rgba(244, 180, 0, 0.5);
+  outline-offset: 3px;
+}
+.button-primary {
+  background: #f4b400;
+  color: #031f3d;
+  box-shadow: 0 14px 35px rgba(244, 180, 0, 0.22);
+}
+.button-primary:hover {
+  background: #ffc62b;
+  box-shadow: 0 18px 42px rgba(244, 180, 0, 0.3);
+}
+.button-secondary {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  backdrop-filter: blur(14px);
+}
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+.button-blue {
+  background: #0875c9;
+  color: #fff;
+  box-shadow: 0 14px 35px rgba(8, 117, 201, 0.22);
+}
+.button-small {
+  min-height: 42px;
+  padding-inline: 18px;
+  font-size: 0.84rem;
+}
+
+/* The sticky glass header keeps calls-to-action visible without dominating the page. */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  border-bottom: 1px solid rgba(220, 230, 237, 0.8);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 36px rgba(3, 31, 61, 0.06);
+  backdrop-filter: blur(18px);
+}
+.nav-link {
+  color: #334b5f;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: color 160ms ease;
+}
+.nav-link:hover {
+  color: #0875c9;
+}
+.language-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #dce6ed;
+  border-radius: 999px;
+  padding: 8px 11px;
+  color: #8a99a6;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+.language-pill .active {
+  color: #063c73;
+}
+
+/* The mobile menu uses native HTML details for a small and resilient implementation. */
+.mobile-menu {
+  position: relative;
+}
+.mobile-menu summary {
+  display: grid;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  list-style: none;
+  place-items: center;
+  border: 1px solid #dce6ed;
+  border-radius: 14px;
+  color: #063c73;
+}
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+.mobile-menu .menu-close {
+  display: none;
+}
+.mobile-menu[open] .menu-open {
+  display: none;
+}
+.mobile-menu[open] .menu-close {
+  display: block;
+}
+.mobile-menu-panel {
+  position: absolute;
+  right: 0;
+  top: 58px;
+  width: min(330px, calc(100vw - 40px));
+  border: 1px solid #dce6ed;
+  border-radius: 22px;
+  background: #fff;
+  padding: 22px;
+  box-shadow: 0 28px 70px rgba(3, 31, 61, 0.18);
+}
+.mobile-menu-panel nav a {
+  border-bottom: 1px solid #eef3f6;
+  padding: 13px 2px;
+  color: #1c3448;
+  font-weight: 750;
+}
+
+/* Hero image overlays protect text contrast on all device sizes. */
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 31, 61, 0.99) 0%,
+    rgba(3, 31, 61, 0.91) 42%,
+    rgba(3, 31, 61, 0.28) 78%,
+    rgba(3, 31, 61, 0.12) 100%
+  );
+  z-index: 1;
+}
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 180px;
+  background: linear-gradient(0deg, #031f3d 0%, transparent 100%);
+  z-index: 1;
+}
+.hero-title {
+  /* Strong but comfortable on laptops and desktop monitors. */
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+/* Decorative grid and orbs establish a technical identity without stock UI effects. */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(127, 211, 243, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 211, 243, 0.14) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.orb {
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.28;
+}
+.orb-blue {
+  background: #18a5d8;
+}
+.orb-gold {
+  background: #f4b400;
+}
+
+/* Cards intentionally use modest movement so the site still feels serious. */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dce6ed;
+  border-radius: 24px;
+  background: #fff;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(3, 31, 61, 0.045);
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(#18a5d8, #0875c9);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 180ms ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #a9d7ed;
+  box-shadow: 0 22px 55px rgba(3, 31, 61, 0.09);
+}
+.service-card:hover::before {
+  transform: scaleY(1);
+}
+.icon-box {
+  display: grid;
+  height: 48px;
+  width: 48px;
+  place-items: center;
+  border-radius: 15px;
+  background: #eaf4fa;
+  color: #0875c9;
+}
+
+.process-line {
+  position: relative;
+}
+.process-line::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 44px;
+  bottom: -24px;
+  width: 1px;
+  background: linear-gradient(#18a5d8, rgba(24, 165, 216, 0.08));
+}
+.process-line:last-child::before {
+  display: none;
+}
+.process-number {
+  display: grid;
+  height: 54px;
+  width: 54px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(127, 211, 243, 0.28);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4b400;
+  font-weight: 900;
+}
+
+.route-line {
+  position: relative;
+  height: 3px;
+  background: linear-gradient(90deg, #18a5d8, #f4b400);
+}
+.route-line::before,
+.route-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 16px;
+  width: 16px;
+  transform: translateY(-50%);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(24, 165, 216, 0.2);
+}
+.route-line::before {
+  left: 0;
+  background: #18a5d8;
+}
+.route-line::after {
+  right: 0;
+  background: #f4b400;
+  box-shadow: 0 0 0 5px rgba(244, 180, 0, 0.2);
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 34px 80px rgba(3, 31, 61, 0.18);
+}
+.image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Contact form controls are large enough for comfortable mobile use. */
+.form-label {
+  display: grid;
+  gap: 9px;
+  color: #243d51;
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+.form-control {
+  width: 100%;
+  border: 1px solid #cfdde6;
+  border-radius: 15px;
+  background: #fff;
+  padding: 13px 15px;
+  color: #14283a;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+.form-control:focus {
+  border-color: #0875c9;
+  box-shadow: 0 0 0 4px rgba(8, 117, 201, 0.1);
+}
+textarea.form-control {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.footer-link {
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+.footer-link:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 160ms ease;
+}
+.contact-link:hover {
+  color: #fff;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  background: #20b85a;
+  color: #fff;
+  padding: 12px 17px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  box-shadow: 0 16px 45px rgba(3, 31, 61, 0.3);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  background: #159a48;
+}
+
+/* Soft entrance animation honours reduced-motion accessibility settings. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: rise-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.delay-1 {
+  animation-delay: 100ms;
+}
+.delay-2 {
+  animation-delay: 200ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .container-shell {
+    width: min(100% - 28px, 1180px);
+  }
+  .hero-media::before {
+    background: linear-gradient(
+      90deg,
+      rgba(3, 31, 61, 0.98),
+      rgba(3, 31, 61, 0.82)
+    );
+  }
+  .whatsapp-float span {
+    display: none;
+  }
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    padding: 12px;
+  }
+}

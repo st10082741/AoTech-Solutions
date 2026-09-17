@@ -1,0 +1,11 @@
+// Language: TypeScript + JSX (TSX) | Purpose: Localised company story, mission, vision and values page.
+import { Eye, Gauge, Goal, ShieldCheck } from "lucide-react";
+import { PageHero } from "@/components/ui/page-hero";
+import { siteContent } from "@/content/site-content";
+import type { Locale } from "@/types/site";
+
+export function AboutPage({ locale }: { locale: Locale }) {
+  const copy = siteContent[locale].about;
+  const icons = [ShieldCheck, Gauge, Goal, Eye];
+  return <><PageHero eyebrow={copy.eyebrow} title={copy.title} intro={copy.intro} /><section className="section-space"><div className="container-shell grid items-center gap-14 lg:grid-cols-2"><div className="image-frame min-h-[520px]"><img src="/images/technical-verification.webp" alt="AoTech procurement quality verification" className="absolute inset-0 h-full w-full object-cover" loading="lazy" /></div><div><h2 className="section-title text-navy">{copy.storyTitle}</h2><p className="mt-6 text-lg leading-8 text-slate">{copy.storyBody}</p><div className="mt-8 rounded-3xl bg-mist p-7"><h3 className="text-xl font-black text-navy">{copy.purposeTitle}</h3><p className="mt-3 leading-7 text-slate">{copy.purposeBody}</p></div></div></div></section><section className="section-space bg-mist"><div className="container-shell grid gap-5 md:grid-cols-2"><article className="service-card"><Goal className="h-8 w-8 text-blue"/><h2 className="mt-5 text-2xl font-black text-navy">{copy.missionTitle}</h2><p className="mt-3 leading-7 text-slate">{copy.missionBody}</p></article><article className="service-card"><Eye className="h-8 w-8 text-blue"/><h2 className="mt-5 text-2xl font-black text-navy">{copy.visionTitle}</h2><p className="mt-3 leading-7 text-slate">{copy.visionBody}</p></article></div></section><section className="section-space"><div className="container-shell"><h2 className="section-title max-w-3xl text-navy">{copy.valuesTitle}</h2><div className="mt-11 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{copy.values.map((value,index)=>{const Icon=icons[index];return <article className="service-card" key={value.title}><span className="icon-box"><Icon className="h-5 w-5"/></span><h3 className="mt-5 text-xl font-black text-navy">{value.title}</h3><p className="mt-3 leading-7 text-slate">{value.description}</p></article>})}</div></div></section></>;
+}
