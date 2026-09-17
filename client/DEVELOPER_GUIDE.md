@@ -38,16 +38,16 @@ client/
 
 ## Where to make changes
 
-| Change | File or folder |
-| --- | --- |
-| Add or edit a page | `src/pages/` |
-| Edit Portuguese or English wording | `src/content/site-content.ts` |
-| Change telephone numbers or email | `src/config/company.ts` |
-| Change colours, spacing or animation | `src/styles/globals.css` |
-| Change navigation or footer | `src/components/layout/` |
-| Change the request form | `src/components/forms/ContactForm.tsx` |
-| Replace website photographs | `public/images/` |
-| Replace portfolio PDFs | `public/documents/` |
+| Change                               | File or folder                         |
+| ------------------------------------ | -------------------------------------- |
+| Add or edit a page                   | `src/pages/`                           |
+| Edit Portuguese or English wording   | `src/content/site-content.ts`          |
+| Change telephone numbers or email    | `src/config/company.ts`                |
+| Change colours, spacing or animation | `src/styles/globals.css`               |
+| Change navigation or footer          | `src/components/layout/`               |
+| Change the request form              | `src/components/forms/ContactForm.tsx` |
+| Replace website photographs          | `public/images/`                       |
+| Replace portfolio PDFs               | `public/documents/`                    |
 
 ## Language system
 
@@ -67,12 +67,8 @@ npm run preview
 
 ## Deploy on Vercel
 
-Import the project and set **Root Directory** to `client`. Vercel detects Vite and uses the included configuration. No secret environment variables are required.
+Import the project and set **Root Directory** to `client`. Vercel detects Vite and uses the included configuration. Add `VITE_FORMSPREE_ENDPOINT` to the Vercel environment variables before deployment. The Formspree endpoint is configuration data rather than a private credential.
 
 ## Comment convention
 
 Every hand-written code file starts with its language and purpose. Important logic is explained near the code. JSON files cannot legally contain comments, so `package.json` and `vercel.json` are documented in this README instead.
-
-## Commercial note
-
-The public site explains the pre-funded procurement model but does not publish the 12% fee or R2,000 minimum. This preserves quotation flexibility.
