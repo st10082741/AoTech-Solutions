@@ -37,290 +37,119 @@ export const siteContent: Record<"pt" | "en", SiteContent> = {
         "Localizamos fornecedores, verificamos especificações, coordenamos compras e acompanhamos o envio de materiais para empresas privadas em Angola.",
       primaryCta: "Falar no WhatsApp",
       secondaryCta: "Conhecer o processo",
-      trust: [
-        "Procurement pré-financiado",
-        "Cotações transparentes",
-        "Acompanhamento dedicado",
-      ],
+      trust: ["Procurement pré-financiado", "Cotações transparentes", "Acompanhamento dedicado"],
       servicesEyebrow: "CAPACIDADE DE EXECUÇÃO",
       servicesTitle: "Um único ponto de contacto para todo o processo",
       servicesIntro:
         "Reduzimos a fragmentação entre fornecedores, documentação e logística para que o cliente acompanhe a operação com clareza.",
       services: [
-        {
-          title: "Sourcing de fornecedores",
-          description:
-            "Pesquisa e comparação de fornecedores adequados na África do Sul.",
-        },
-        {
-          title: "Validação técnica",
-          description:
-            "Confirmação de referências, especificações e alternativas compatíveis.",
-        },
-        {
-          title: "Coordenação de compras",
-          description:
-            "Apoio desde a cotação aceite até à colocação e acompanhamento da encomenda.",
-        },
-        {
-          title: "Logística transfronteiriça",
-          description:
-            "Coordenação com operadores logísticos para expedição até Angola.",
-        },
-        {
-          title: "Documentação",
-          description:
-            "Organização dos documentos comerciais e de transporte aplicáveis ao âmbito acordado.",
-        },
-        {
-          title: "Acompanhamento",
-          description:
-            "Atualizações de progresso e seguimento da operação até à entrega coordenada.",
-        },
+        { title: "Sourcing de fornecedores", description: "Pesquisa e comparação de fornecedores adequados na África do Sul." },
+        { title: "Validação técnica", description: "Confirmação de referências, especificações e alternativas compatíveis." },
+        { title: "Coordenação de compras", description: "Apoio desde a cotação aceite até à colocação e acompanhamento da encomenda." },
+        { title: "Logística transfronteiriça", description: "Coordenação com operadores logísticos para expedição até Angola." },
+        { title: "Documentação", description: "Organização dos documentos comerciais e de transporte aplicáveis ao âmbito acordado." },
+        { title: "Acompanhamento", description: "Atualizações de progresso e seguimento da operação até à entrega coordenada." },
       ],
       processEyebrow: "PROCESSO CLARO",
       processTitle: "Oito etapas. Uma operação coordenada.",
-      processIntro:
-        "Cada encomenda avança através de marcos claros e aprovação escrita do cliente.",
+      processIntro: "Cada encomenda avança através de marcos claros e aprovação escrita do cliente.",
       process: [
-        {
-          number: "01",
-          title: "Pedido",
-          description:
-            "Recebemos a lista, quantidades, especificações e destino.",
-        },
-        {
-          number: "02",
-          title: "Pesquisa",
-          description: "Identificamos fornecedores e opções adequadas.",
-        },
-        {
-          number: "03",
-          title: "Cotação",
-          description: "Apresentamos o âmbito e o custo consolidado.",
-        },
-        {
-          number: "04",
-          title: "Aprovação",
-          description: "O cliente confirma por escrito.",
-        },
-        {
-          number: "05",
-          title: "Pagamento",
-          description: "A operação é financiada antes dos compromissos.",
-        },
-        {
-          number: "06",
-          title: "Aquisição",
-          description: "Coordenamos a compra junto dos fornecedores.",
-        },
-        {
-          number: "07",
-          title: "Expedição",
-          description: "Preparamos e acompanhamos o envio.",
-        },
-        {
-          number: "08",
-          title: "Entrega",
-          description: "Mantemos o acompanhamento até à conclusão.",
-        },
+        { number: "01", title: "Pedido", description: "Recebemos a lista, quantidades, especificações e destino." },
+        { number: "02", title: "Pesquisa", description: "Identificamos fornecedores e opções adequadas." },
+        { number: "03", title: "Cotação", description: "Apresentamos o âmbito e o custo consolidado." },
+        { number: "04", title: "Aprovação", description: "O cliente confirma por escrito." },
+        { number: "05", title: "Pagamento", description: "A operação é financiada antes dos compromissos." },
+        { number: "06", title: "Aquisição", description: "Coordenamos a compra junto dos fornecedores." },
+        { number: "07", title: "Expedição", description: "Preparamos e acompanhamos o envio." },
+        { number: "08", title: "Entrega", description: "Mantemos o acompanhamento até à conclusão." },
       ],
       corridorEyebrow: "CORREDOR COMERCIAL",
-      corridorTitle:
-        "Ligamos a capacidade de fornecimento sul-africana à procura angolana.",
+      corridorTitle: "Ligamos a capacidade de fornecimento sul-africana à procura angolana.",
       corridorBody:
         "A AoTech Solutions atua como coordenador comercial entre a necessidade do cliente e os fornecedores selecionados, reduzindo contactos dispersos e aumentando a visibilidade da operação.",
-      corridorPoints: [
-        "Fornecimento na África do Sul",
-        "Coordenação centralizada",
-        "Destino e acompanhamento em Angola",
-      ],
+      corridorPoints: ["Fornecimento na África do Sul", "Coordenação centralizada", "Destino e acompanhamento em Angola"],
       sectorsEyebrow: "O QUE PODEMOS LOCALIZAR",
       sectorsTitle: "Procurement adaptado à necessidade",
-      sectors: [
-        "Peças e filtros industriais",
-        "Materiais de construção",
-        "Equipamentos e ferramentas",
-        "Tecnologia e escritório",
-        "Consumíveis operacionais",
-        "Pedidos especializados",
-      ],
+      sectors: ["Peças e filtros industriais", "Materiais de construção", "Equipamentos e ferramentas", "Tecnologia e escritório", "Consumíveis operacionais", "Pedidos especializados"],
       paymentEyebrow: "MODELO COMERCIAL",
       paymentTitle: "O cliente conhece o custo antes de avançar.",
       paymentBody:
         "Depois da validação do pedido, emitimos uma cotação escrita com os materiais, serviços acordados e custos logísticos aplicáveis. A aquisição começa após aceitação e pagamento integral da cotação.",
-      paymentNote:
-        "A AoTech Solutions opera num modelo pré-financiado e não utiliza fundos próprios para financiar encomendas de clientes.",
+      paymentNote: "A AoTech Solutions opera num modelo pré-financiado e não utiliza fundos próprios para financiar encomendas de clientes.",
       documentsEyebrow: "DOCUMENTAÇÃO CORPORATIVA",
       documentsTitle: "Conheça a AoTech em detalhe",
-      documentsIntro:
-        "Consulte o nosso portfólio institucional em português ou inglês.",
+      documentsIntro: "Consulte o nosso portfólio institucional em português ou inglês.",
       finalTitle: "Tem uma lista de materiais para adquirir?",
-      finalBody:
-        "Envie as referências, quantidades, destino e prazo pretendido. Organizaremos os próximos passos.",
+      finalBody: "Envie as referências, quantidades, destino e prazo pretendido. Organizaremos os próximos passos.",
     },
     about: {
       eyebrow: "QUEM SOMOS",
       title: "Procurement com clareza, coordenação e responsabilidade.",
-      intro:
-        "A AoTech Solutions apoia empresas privadas que precisam adquirir materiais na África do Sul e coordenar o seu envio para Angola.",
+      intro: "A AoTech Solutions apoia empresas privadas que precisam adquirir materiais na África do Sul e coordenar o seu envio para Angola.",
       storyTitle: "Uma ligação prática entre a procura e o fornecimento",
       storyBody:
         "Nascemos para simplificar operações que normalmente exigem vários contactos, verificações e prestadores. Centralizamos a comunicação e conduzimos cada pedido desde a confirmação da necessidade até ao acompanhamento da entrega.",
       purposeTitle: "O nosso propósito",
-      purposeBody:
-        "Transformar pedidos complexos numa operação organizada, documentada e fácil de acompanhar.",
+      purposeBody: "Transformar pedidos complexos numa operação organizada, documentada e fácil de acompanhar.",
       missionTitle: "Missão",
-      missionBody:
-        "Fornecer soluções de procurement eficientes, transparentes e adequadas às necessidades reais de cada cliente.",
+      missionBody: "Fornecer soluções de procurement eficientes, transparentes e adequadas às necessidades reais de cada cliente.",
       visionTitle: "Visão",
-      visionBody:
-        "Ser uma referência confiável na ligação comercial e logística entre a África do Sul e Angola.",
+      visionBody: "Ser uma referência confiável na ligação comercial e logística entre a África do Sul e Angola.",
       valuesTitle: "Valores que orientam cada operação",
       values: [
-        {
-          title: "Transparência",
-          description:
-            "Âmbito, custos e responsabilidades apresentados antes da aprovação.",
-        },
-        {
-          title: "Precisão",
-          description:
-            "Atenção às referências, quantidades, especificações e documentação.",
-        },
-        {
-          title: "Responsabilidade",
-          description:
-            "Comunicação clara e acompanhamento dos compromissos assumidos.",
-        },
-        {
-          title: "Eficiência",
-          description:
-            "Processos objetivos para reduzir atrasos e contactos dispersos.",
-        },
+        { title: "Transparência", description: "Âmbito, custos e responsabilidades apresentados antes da aprovação." },
+        { title: "Precisão", description: "Atenção às referências, quantidades, especificações e documentação." },
+        { title: "Responsabilidade", description: "Comunicação clara e acompanhamento dos compromissos assumidos." },
+        { title: "Eficiência", description: "Processos objetivos para reduzir atrasos e contactos dispersos." },
       ],
     },
     services: {
       eyebrow: "SERVIÇOS",
       title: "Apoio completo de procurement e coordenação de fornecimento.",
-      intro:
-        "O serviço é ajustado ao âmbito de cada encomenda, desde uma referência específica até uma lista consolidada de materiais.",
+      intro: "O serviço é ajustado ao âmbito de cada encomenda, desde uma referência específica até uma lista consolidada de materiais.",
       items: [
-        {
-          title: "Análise do pedido",
-          description:
-            "Revisão das referências, especificações, quantidades, destino e prazo necessário.",
-        },
-        {
-          title: "Pesquisa de mercado",
-          description:
-            "Identificação de fornecedores e recolha de opções comerciais adequadas.",
-        },
-        {
-          title: "Comparação de cotações",
-          description:
-            "Comparação de preço, disponibilidade, prazo, marca e condições de fornecimento.",
-        },
-        {
-          title: "Verificação de especificações",
-          description:
-            "Conferência de fichas técnicas, referências e equivalentes quando aplicável.",
-        },
-        {
-          title: "Cotação consolidada",
-          description:
-            "Apresentação organizada do âmbito e dos custos antes da aprovação.",
-        },
-        {
-          title: "Aquisição coordenada",
-          description:
-            "Colocação e acompanhamento de encomendas após o financiamento do cliente.",
-        },
-        {
-          title: "Logística e expedição",
-          description:
-            "Coordenação com transportadores e prestadores adequados ao destino acordado.",
-        },
-        {
-          title: "Acompanhamento da entrega",
-          description:
-            "Comunicação de marcos e seguimento até à conclusão da operação.",
-        },
+        { title: "Análise do pedido", description: "Revisão das referências, especificações, quantidades, destino e prazo necessário." },
+        { title: "Pesquisa de mercado", description: "Identificação de fornecedores e recolha de opções comerciais adequadas." },
+        { title: "Comparação de cotações", description: "Comparação de preço, disponibilidade, prazo, marca e condições de fornecimento." },
+        { title: "Verificação de especificações", description: "Conferência de fichas técnicas, referências e equivalentes quando aplicável." },
+        { title: "Cotação consolidada", description: "Apresentação organizada do âmbito e dos custos antes da aprovação." },
+        { title: "Aquisição coordenada", description: "Colocação e acompanhamento de encomendas após o financiamento do cliente." },
+        { title: "Logística e expedição", description: "Coordenação com transportadores e prestadores adequados ao destino acordado." },
+        { title: "Acompanhamento da entrega", description: "Comunicação de marcos e seguimento até à conclusão da operação." },
       ],
       notSureTitle: "Não encontrou a categoria que procura?",
-      notSureBody:
-        "Envie-nos a sua lista. Avaliaremos a possibilidade de sourcing antes de assumir qualquer compromisso.",
+      notSureBody: "Envie-nos a sua lista. Avaliaremos a possibilidade de sourcing antes de assumir qualquer compromisso.",
     },
     procurement: {
       eyebrow: "COMO TRABALHAMOS",
       title: "Um modelo desenhado para proteger a operação e o fluxo de caixa.",
-      intro:
-        "Cada pedido começa com informação suficiente para procurar o produto correto e termina com acompanhamento documentado.",
+      intro: "Cada pedido começa com informação suficiente para procurar o produto correto e termina com acompanhamento documentado.",
       requirementTitle: "O que precisamos para começar",
-      requirementItems: [
-        "Lista de materiais ou referências",
-        "Especificações ou fichas técnicas",
-        "Quantidade de cada item",
-        "Destino final",
-        "Prazo pretendido",
-        "Preferência por original ou equivalente",
-      ],
+      requirementItems: ["Lista de materiais ou referências", "Especificações ou fichas técnicas", "Quantidade de cada item", "Destino final", "Prazo pretendido", "Preferência por original ou equivalente"],
       processTitle: "Fluxo de procurement",
       process: [
-        {
-          number: "01",
-          title: "Receção e validação",
-          description:
-            "Confirmamos o que deve ser adquirido e esclarecemos lacunas.",
-        },
-        {
-          number: "02",
-          title: "Sourcing e comparação",
-          description:
-            "Procuramos opções e avaliamos disponibilidade e condições.",
-        },
-        {
-          number: "03",
-          title: "Cotação escrita",
-          description: "Consolidamos custos e âmbito para decisão do cliente.",
-        },
-        {
-          number: "04",
-          title: "Aceitação e financiamento",
-          description:
-            "O cliente aprova e paga integralmente antes dos compromissos.",
-        },
-        {
-          number: "05",
-          title: "Compra e verificação",
-          description: "Coordenamos a encomenda e as verificações acordadas.",
-        },
-        {
-          number: "06",
-          title: "Expedição e seguimento",
-          description:
-            "Acompanhamos o transporte e comunicamos os marcos da entrega.",
-        },
+        { number: "01", title: "Receção e validação", description: "Confirmamos o que deve ser adquirido e esclarecemos lacunas." },
+        { number: "02", title: "Sourcing e comparação", description: "Procuramos opções e avaliamos disponibilidade e condições." },
+        { number: "03", title: "Cotação escrita", description: "Consolidamos custos e âmbito para decisão do cliente." },
+        { number: "04", title: "Aceitação e financiamento", description: "O cliente aprova e paga integralmente antes dos compromissos." },
+        { number: "05", title: "Compra e verificação", description: "Coordenamos a encomenda e as verificações acordadas." },
+        { number: "06", title: "Expedição e seguimento", description: "Acompanhamos o transporte e comunicamos os marcos da entrega." },
       ],
       commercialTitle: "Modelo pré-financiado",
-      commercialBody:
-        "A AoTech não financia encomendas com fundos próprios. O pagamento integral da cotação permite pagar fornecedores e prestadores logísticos sem atrasar a operação.",
+      commercialBody: "A AoTech não financia encomendas com fundos próprios. O pagamento integral da cotação permite pagar fornecedores e prestadores logísticos sem atrasar a operação.",
       transparencyTitle: "Transparência antes da aprovação",
-      transparencyBody:
-        "A cotação identifica o âmbito aprovado e os custos conhecidos. Encargos não incluídos, como determinadas taxas aduaneiras ou armazenagem extraordinária, são tratados conforme as condições acordadas.",
+      transparencyBody: "A cotação identifica o âmbito aprovado e os custos conhecidos. Encargos não incluídos, como determinadas taxas aduaneiras ou armazenagem extraordinária, são tratados conforme as condições acordadas.",
       scopeTitle: "Responsabilidades definidas",
-      scopeBody:
-        "Antes de avançar, confirmamos quem assume transporte, seguro, desembaraço, impostos de importação e entrega final. Isso reduz surpresas e protege ambas as partes.",
+      scopeBody: "Antes de avançar, confirmamos quem assume transporte, seguro, desembaraço, impostos de importação e entrega final. Isso reduz surpresas e protege ambas as partes.",
     },
     contact: {
       eyebrow: "CONTACTO",
       title: "Conte-nos o que precisa adquirir.",
-      intro:
-        "Quanto mais completo for o pedido, mais rapidamente poderemos avaliar o sourcing e preparar os próximos passos.",
+      intro: "Quanto mais completo for o pedido, mais rapidamente poderemos avaliar o sourcing e preparar os próximos passos.",
       formTitle: "Preparar pedido",
-      formIntro:
-        "Preencha os dados e escolha enviar pelo WhatsApp ou pelo seu email.",
+      formIntro: "Preencha os dados e escolha enviar pelo WhatsApp ou pelo seu email.",
       name: "Seu nome",
+      email: "Seu email",
       company: "Empresa",
       materials: "Materiais, referências ou especificações",
       quantity: "Quantidades",
@@ -329,16 +158,15 @@ export const siteContent: Record<"pt" | "en", SiteContent> = {
       optional: "Opcional",
       sendWhatsapp: "Enviar no WhatsApp",
       sendEmail: "Enviar por email",
-      privacy:
-        "Nenhuma informação é guardada no website. A mensagem é preparada apenas no seu dispositivo.",
+      sending: "A enviar…",
+      privacy: "Os dados são processados com segurança exclusivamente para responder ao seu pedido de contacto.",
       directTitle: "Contactos diretos",
       saLabel: "WhatsApp e chamadas - África do Sul",
       aoLabel: "Chamadas diretas - Angola",
       emailLabel: "Email",
     },
     footer: {
-      summary:
-        "Procurement e coordenação de fornecimento entre a África do Sul e Angola.",
+      summary: "Procurement e coordenação de fornecimento entre a África do Sul e Angola.",
       navigation: "Navegação",
       contact: "Contactos",
       legal: "Todos os direitos reservados.",
@@ -348,8 +176,7 @@ export const siteContent: Record<"pt" | "en", SiteContent> = {
     localeName: "English",
     meta: {
       title: "AoTech Solutions | South Africa to Angola Procurement",
-      description:
-        "Supplier sourcing, materials procurement and logistics coordination between South Africa and Angola.",
+      description: "Supplier sourcing, materials procurement and logistics coordination between South Africa and Angola.",
     },
     nav: {
       items: [
@@ -375,294 +202,118 @@ export const siteContent: Record<"pt" | "en", SiteContent> = {
       eyebrow: "PROCUREMENT · SOUTH AFRICA → ANGOLA",
       title: "From requirement to delivery,",
       titleAccent: "we coordinate every stage.",
-      intro:
-        "We source suppliers, verify specifications, coordinate purchasing and support the movement of materials for private companies in Angola.",
+      intro: "We source suppliers, verify specifications, coordinate purchasing and support the movement of materials for private companies in Angola.",
       primaryCta: "Talk to us on WhatsApp",
       secondaryCta: "Explore the process",
-      trust: [
-        "Pre-funded procurement",
-        "Transparent quotations",
-        "Dedicated follow-up",
-      ],
+      trust: ["Pre-funded procurement", "Transparent quotations", "Dedicated follow-up"],
       servicesEyebrow: "DELIVERY CAPABILITY",
       servicesTitle: "One point of contact for the entire process",
-      servicesIntro:
-        "We reduce fragmentation across suppliers, documentation and logistics so clients can follow each operation with clarity.",
+      servicesIntro: "We reduce fragmentation across suppliers, documentation and logistics so clients can follow each operation with clarity.",
       services: [
-        {
-          title: "Supplier sourcing",
-          description:
-            "Research and comparison of suitable suppliers in South Africa.",
-        },
-        {
-          title: "Technical validation",
-          description:
-            "Confirmation of references, specifications and compatible alternatives.",
-        },
-        {
-          title: "Purchasing coordination",
-          description:
-            "Support from approved quotation through order placement and follow-up.",
-        },
-        {
-          title: "Cross-border logistics",
-          description:
-            "Coordination with logistics operators for dispatch to Angola.",
-        },
-        {
-          title: "Documentation",
-          description:
-            "Organisation of commercial and transport documents within the agreed scope.",
-        },
-        {
-          title: "Progress follow-up",
-          description:
-            "Milestone updates and operational follow-up through coordinated delivery.",
-        },
+        { title: "Supplier sourcing", description: "Research and comparison of suitable suppliers in South Africa." },
+        { title: "Technical validation", description: "Confirmation of references, specifications and compatible alternatives." },
+        { title: "Purchasing coordination", description: "Support from approved quotation through order placement and follow-up." },
+        { title: "Cross-border logistics", description: "Coordination with logistics operators for dispatch to Angola." },
+        { title: "Documentation", description: "Organisation of commercial and transport documents within the agreed scope." },
+        { title: "Progress follow-up", description: "Milestone updates and operational follow-up through coordinated delivery." },
       ],
       processEyebrow: "A CLEAR PROCESS",
       processTitle: "Eight stages. One coordinated operation.",
-      processIntro:
-        "Every order advances through clear milestones and written client approval.",
+      processIntro: "Every order advances through clear milestones and written client approval.",
       process: [
-        {
-          number: "01",
-          title: "Request",
-          description:
-            "We receive the list, quantities, specifications and destination.",
-        },
-        {
-          number: "02",
-          title: "Source",
-          description: "We identify suitable suppliers and options.",
-        },
-        {
-          number: "03",
-          title: "Quote",
-          description: "We present the consolidated scope and cost.",
-        },
-        {
-          number: "04",
-          title: "Approve",
-          description: "The client confirms in writing.",
-        },
-        {
-          number: "05",
-          title: "Fund",
-          description: "The operation is funded before commitments.",
-        },
-        {
-          number: "06",
-          title: "Procure",
-          description: "We coordinate purchasing with suppliers.",
-        },
-        {
-          number: "07",
-          title: "Dispatch",
-          description: "We prepare and follow the shipment.",
-        },
-        {
-          number: "08",
-          title: "Deliver",
-          description: "We follow the operation through completion.",
-        },
+        { number: "01", title: "Request", description: "We receive the list, quantities, specifications and destination." },
+        { number: "02", title: "Source", description: "We identify suitable suppliers and options." },
+        { number: "03", title: "Quote", description: "We present the consolidated scope and cost." },
+        { number: "04", title: "Approve", description: "The client confirms in writing." },
+        { number: "05", title: "Fund", description: "The operation is funded before commitments." },
+        { number: "06", title: "Procure", description: "We coordinate purchasing with suppliers." },
+        { number: "07", title: "Dispatch", description: "We prepare and follow the shipment." },
+        { number: "08", title: "Deliver", description: "We follow the operation through completion." },
       ],
       corridorEyebrow: "COMMERCIAL CORRIDOR",
-      corridorTitle:
-        "Connecting South African supply capability with Angolan demand.",
-      corridorBody:
-        "AoTech Solutions coordinates the commercial link between client requirements and selected suppliers, reducing fragmented communication and improving operational visibility.",
-      corridorPoints: [
-        "Supply in South Africa",
-        "Centralised coordination",
-        "Destination and follow-up in Angola",
-      ],
+      corridorTitle: "Connecting South African supply capability with Angolan demand.",
+      corridorBody: "AoTech Solutions coordinates the commercial link between client requirements and selected suppliers, reducing fragmented communication and improving operational visibility.",
+      corridorPoints: ["Supply in South Africa", "Centralised coordination", "Destination and follow-up in Angola"],
       sectorsEyebrow: "WHAT WE CAN SOURCE",
       sectorsTitle: "Procurement shaped around the requirement",
-      sectors: [
-        "Industrial parts and filters",
-        "Construction materials",
-        "Equipment and tools",
-        "Technology and office",
-        "Operational consumables",
-        "Specialised requests",
-      ],
+      sectors: ["Industrial parts and filters", "Construction materials", "Equipment and tools", "Technology and office", "Operational consumables", "Specialised requests"],
       paymentEyebrow: "COMMERCIAL MODEL",
       paymentTitle: "Clients know the cost before moving forward.",
-      paymentBody:
-        "After validating the request, we issue a written quotation covering materials, agreed services and applicable logistics costs. Procurement begins after acceptance and full payment of the quotation.",
-      paymentNote:
-        "AoTech Solutions uses a pre-funded model and does not use its own funds to finance client orders.",
+      paymentBody: "After validating the request, we issue a written quotation covering materials, agreed services and applicable logistics costs. Procurement begins after acceptance and full payment of the quotation.",
+      paymentNote: "AoTech Solutions uses a pre-funded model and does not use its own funds to finance client orders.",
       documentsEyebrow: "COMPANY DOCUMENTS",
       documentsTitle: "Explore AoTech in more detail",
       documentsIntro: "View our company portfolio in Portuguese or English.",
       finalTitle: "Do you have a materials list to procure?",
-      finalBody:
-        "Send the references, quantities, destination and required date. We will organise the next steps.",
+      finalBody: "Send the references, quantities, destination and required date. We will organise the next steps.",
     },
     about: {
       eyebrow: "WHO WE ARE",
-      title:
-        "Procurement built around clarity, coordination and responsibility.",
-      intro:
-        "AoTech Solutions supports private companies that need to procure materials in South Africa and coordinate their movement to Angola.",
+      title: "Procurement built around clarity, coordination and responsibility.",
+      intro: "AoTech Solutions supports private companies that need to procure materials in South Africa and coordinate their movement to Angola.",
       storyTitle: "A practical link between demand and supply",
-      storyBody:
-        "We were created to simplify operations that normally require several contacts, verifications and service providers. We centralise communication and guide each request from requirement confirmation through delivery follow-up.",
+      storyBody: "We were created to simplify operations that normally require several contacts, verifications and service providers. We centralise communication and guide each request from requirement confirmation through delivery follow-up.",
       purposeTitle: "Our purpose",
-      purposeBody:
-        "Turn complex requests into organised, documented and easy-to-follow operations.",
+      purposeBody: "Turn complex requests into organised, documented and easy-to-follow operations.",
       missionTitle: "Mission",
-      missionBody:
-        "Provide efficient, transparent procurement solutions aligned with each client's actual requirements.",
+      missionBody: "Provide efficient, transparent procurement solutions aligned with each client's actual requirements.",
       visionTitle: "Vision",
-      visionBody:
-        "Become a trusted commercial and logistics link between South Africa and Angola.",
+      visionBody: "Become a trusted commercial and logistics link between South Africa and Angola.",
       valuesTitle: "Values that guide every operation",
       values: [
-        {
-          title: "Transparency",
-          description:
-            "Scope, costs and responsibilities presented before approval.",
-        },
-        {
-          title: "Accuracy",
-          description:
-            "Attention to references, quantities, specifications and documentation.",
-        },
-        {
-          title: "Responsibility",
-          description:
-            "Clear communication and follow-up on agreed commitments.",
-        },
-        {
-          title: "Efficiency",
-          description:
-            "Focused processes that reduce delays and fragmented communication.",
-        },
+        { title: "Transparency", description: "Scope, costs and responsibilities presented before approval." },
+        { title: "Accuracy", description: "Attention to references, quantities, specifications and documentation." },
+        { title: "Responsibility", description: "Clear communication and follow-up on agreed commitments." },
+        { title: "Efficiency", description: "Focused processes that reduce delays and fragmented communication." },
       ],
     },
     services: {
       eyebrow: "SERVICES",
       title: "End-to-end procurement and supply coordination support.",
-      intro:
-        "The service is adapted to each order, from one specific reference to a consolidated materials list.",
+      intro: "The service is adapted to each order, from one specific reference to a consolidated materials list.",
       items: [
-        {
-          title: "Requirement review",
-          description:
-            "Review of references, specifications, quantities, destination and required date.",
-        },
-        {
-          title: "Market sourcing",
-          description:
-            "Identification of suppliers and collection of suitable commercial options.",
-        },
-        {
-          title: "Quotation comparison",
-          description:
-            "Comparison of price, availability, lead time, brand and supply terms.",
-        },
-        {
-          title: "Specification verification",
-          description:
-            "Review of technical sheets, references and equivalents where applicable.",
-        },
-        {
-          title: "Consolidated quotation",
-          description:
-            "A structured presentation of scope and costs before approval.",
-        },
-        {
-          title: "Coordinated purchasing",
-          description:
-            "Order placement and follow-up after the client funds the operation.",
-        },
-        {
-          title: "Logistics and dispatch",
-          description:
-            "Coordination with carriers and service providers suitable for the agreed destination.",
-        },
-        {
-          title: "Delivery follow-up",
-          description:
-            "Milestone communication and tracking through operational completion.",
-        },
+        { title: "Requirement review", description: "Review of references, specifications, quantities, destination and required date." },
+        { title: "Market sourcing", description: "Identification of suppliers and collection of suitable commercial options." },
+        { title: "Quotation comparison", description: "Comparison of price, availability, lead time, brand and supply terms." },
+        { title: "Specification verification", description: "Review of technical sheets, references and equivalents where applicable." },
+        { title: "Consolidated quotation", description: "A structured presentation of scope and costs before approval." },
+        { title: "Coordinated purchasing", description: "Order placement and follow-up after the client funds the operation." },
+        { title: "Logistics and dispatch", description: "Coordination with carriers and service providers suitable for the agreed destination." },
+        { title: "Delivery follow-up", description: "Milestone communication and tracking through operational completion." },
       ],
       notSureTitle: "Cannot see the category you need?",
-      notSureBody:
-        "Send us your list. We will assess sourcing feasibility before making any commitment.",
+      notSureBody: "Send us your list. We will assess sourcing feasibility before making any commitment.",
     },
     procurement: {
       eyebrow: "HOW WE WORK",
       title: "A model designed to protect the operation and cash flow.",
-      intro:
-        "Every request starts with enough information to source the correct item and ends with documented follow-up.",
+      intro: "Every request starts with enough information to source the correct item and ends with documented follow-up.",
       requirementTitle: "What we need to begin",
-      requirementItems: [
-        "Materials list or references",
-        "Specifications or technical sheets",
-        "Quantity of each item",
-        "Final destination",
-        "Required date",
-        "Original or equivalent preference",
-      ],
+      requirementItems: ["Materials list or references", "Specifications or technical sheets", "Quantity of each item", "Final destination", "Required date", "Original or equivalent preference"],
       processTitle: "Procurement workflow",
       process: [
-        {
-          number: "01",
-          title: "Receive and validate",
-          description:
-            "We confirm what must be procured and clarify missing details.",
-        },
-        {
-          number: "02",
-          title: "Source and compare",
-          description: "We find options and assess availability and terms.",
-        },
-        {
-          number: "03",
-          title: "Written quotation",
-          description:
-            "We consolidate scope and costs for the client's decision.",
-        },
-        {
-          number: "04",
-          title: "Acceptance and funding",
-          description:
-            "The client approves and pays in full before commitments.",
-        },
-        {
-          number: "05",
-          title: "Purchase and verify",
-          description: "We coordinate the order and agreed checks.",
-        },
-        {
-          number: "06",
-          title: "Dispatch and follow-up",
-          description:
-            "We track transport and communicate delivery milestones.",
-        },
+        { number: "01", title: "Receive and validate", description: "We confirm what must be procured and clarify missing details." },
+        { number: "02", title: "Source and compare", description: "We find options and assess availability and terms." },
+        { number: "03", title: "Written quotation", description: "We consolidate scope and costs for the client's decision." },
+        { number: "04", title: "Acceptance and funding", description: "The client approves and pays in full before commitments." },
+        { number: "05", title: "Purchase and verify", description: "We coordinate the order and agreed checks." },
+        { number: "06", title: "Dispatch and follow-up", description: "We track transport and communicate delivery milestones." },
       ],
       commercialTitle: "Pre-funded model",
-      commercialBody:
-        "AoTech does not finance orders with its own funds. Full payment of the quotation allows suppliers and logistics providers to be paid without delaying the operation.",
+      commercialBody: "AoTech does not finance orders with its own funds. Full payment of the quotation allows suppliers and logistics providers to be paid without delaying the operation.",
       transparencyTitle: "Transparency before approval",
-      transparencyBody:
-        "The quotation identifies the approved scope and known costs. Excluded charges, such as certain import duties or exceptional storage, are handled according to the agreed terms.",
+      transparencyBody: "The quotation identifies the approved scope and known costs. Excluded charges, such as certain import duties or exceptional storage, are handled according to the agreed terms.",
       scopeTitle: "Defined responsibilities",
-      scopeBody:
-        "Before proceeding, we establish responsibility for transport, insurance, clearance, import taxes and final delivery. This reduces surprises and protects both parties.",
+      scopeBody: "Before proceeding, we establish responsibility for transport, insurance, clearance, import taxes and final delivery. This reduces surprises and protects both parties.",
     },
     contact: {
       eyebrow: "CONTACT",
       title: "Tell us what you need to procure.",
-      intro:
-        "The more complete the request, the faster we can assess sourcing and prepare the next steps.",
+      intro: "The more complete the request, the faster we can assess sourcing and prepare the next steps.",
       formTitle: "Prepare your request",
-      formIntro:
-        "Complete the details and choose WhatsApp or your email application.",
+      formIntro: "Complete the details and choose WhatsApp or your email application.",
       name: "Your name",
+      email: "Your email",
       company: "Company",
       materials: "Materials, references or specifications",
       quantity: "Quantities",
@@ -671,16 +322,15 @@ export const siteContent: Record<"pt" | "en", SiteContent> = {
       optional: "Optional",
       sendWhatsapp: "Send via WhatsApp",
       sendEmail: "Send via email",
-      privacy:
-        "No information is stored on this website. The message is prepared only on your device.",
+      sending: "Sending…",
+      privacy: "Your details are processed securely and used only to respond to your enquiry.",
       directTitle: "Direct contacts",
       saLabel: "WhatsApp and calls - South Africa",
       aoLabel: "Direct calls - Angola",
       emailLabel: "Email",
     },
     footer: {
-      summary:
-        "Procurement and supply coordination between South Africa and Angola.",
+      summary: "Procurement and supply coordination between South Africa and Angola.",
       navigation: "Navigation",
       contact: "Contacts",
       legal: "All rights reserved.",

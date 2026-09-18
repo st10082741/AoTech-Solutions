@@ -113,6 +113,7 @@ export type SiteContent = {
     formTitle: string;
     formIntro: string;
     name: string;
+    email: string;
     company: string;
     materials: string;
     quantity: string;
@@ -121,6 +122,7 @@ export type SiteContent = {
     optional: string;
     sendWhatsapp: string;
     sendEmail: string;
+    sending: string;
     privacy: string;
     directTitle: string;
     saLabel: string;

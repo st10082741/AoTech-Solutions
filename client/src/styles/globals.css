@@ -1,7 +1,7 @@
-/* Language: CSS + Tailwind CSS 4 | Purpose: Global design system, accessibility and animations. */
+/* Language: CSS + Tailwind CSS 4 | Purpose: Global design system, accessibility and responsive layouts. */
 @import "tailwindcss";
 
-/* Brand tokens are defined once so the visual identity stays consistent. */
+/* Brand colours and typography are defined once for consistency. */
 @theme inline {
   --color-navy: #063c73;
   --color-deep-navy: #031f3d;
@@ -11,11 +11,11 @@
   --color-ink: #14283a;
   --color-slate: #607181;
   --color-line: #dce6ed;
-  --color-mist: #eef5f8;
+  --color-mist: #f3f6f7;
   --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Base reset and document behaviour. */
+/* Base document behaviour. */
 :root {
   color-scheme: light;
   --header-height: 80px;
@@ -24,9 +24,11 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   background: #ffffff;
@@ -35,60 +37,67 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+
 a {
   text-decoration: none;
 }
+
 button,
 input,
 textarea {
   font: inherit;
 }
+
 ::selection {
   background: #f4b400;
   color: #031f3d;
 }
 
-/* Shared width and vertical rhythm prevent pages from drifting apart visually. */
+/* Shared page width and vertical rhythm. */
 .container-shell {
   width: min(1180px, calc(100% - 40px));
   margin-inline: auto;
 }
+
 .section-space {
-  padding-block: clamp(76px, 9vw, 128px);
+  padding-block: clamp(68px, 7.5vw, 108px);
 }
+
 .section-title {
-  /* Balanced size for service, process and commercial-section headings. */
-  font-size: clamp(1.75rem, 3vw, 3rem);
-  font-weight: 850;
-  letter-spacing: -0.035em;
-  line-height: 1.08;
+  /* Restrained scale for corporate section headings. */
+  font-size: clamp(1.75rem, 2.7vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
+
 .eyebrow {
   color: var(--color-gold);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-/* Keyboard users receive a visible shortcut without affecting the visual layout. */
+/* Visible keyboard-access shortcut. */
 .skip-link {
   position: fixed;
   left: 16px;
   top: -60px;
   z-index: 100;
-  border-radius: 999px;
+  border-radius: 6px;
   background: #f4b400;
   color: #031f3d;
   padding: 10px 18px;
   font-weight: 800;
   transition: top 180ms ease;
 }
+
 .skip-link:focus {
   top: 16px;
 }
 
-/* Buttons use a restrained shine and lift effect for a premium feel. */
+/* Square-edged controls suit a practical B2B service. */
 .button {
   display: inline-flex;
   min-height: 50px;
@@ -96,88 +105,104 @@ textarea {
   justify-content: center;
   gap: 10px;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 6px;
   padding: 0 24px;
   font-weight: 800;
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    background 180ms ease;
+    background 160ms ease,
+    border-color 160ms ease;
 }
+
 .button:hover {
-  transform: translateY(-2px);
+  transform: none;
 }
+
 .button:focus-visible {
   outline: 3px solid rgba(244, 180, 0, 0.5);
   outline-offset: 3px;
 }
+
 .button-primary {
   background: #f4b400;
   color: #031f3d;
-  box-shadow: 0 14px 35px rgba(244, 180, 0, 0.22);
 }
+
 .button-primary:hover {
   background: #ffc62b;
-  box-shadow: 0 18px 42px rgba(244, 180, 0, 0.3);
 }
+
 .button-secondary {
-  border-color: rgba(255, 255, 255, 0.24);
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  backdrop-filter: blur(14px);
+  border-color: rgba(255, 255, 255, 0.32);
+  background: transparent;
+  color: #ffffff;
 }
+
 .button-secondary:hover {
   background: rgba(255, 255, 255, 0.14);
 }
+
 .button-blue {
   background: #0875c9;
-  color: #fff;
-  box-shadow: 0 14px 35px rgba(8, 117, 201, 0.22);
+  color: #ffffff;
 }
+
+.button-blue:hover {
+  background: #0668b3;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
 .button-small {
   min-height: 42px;
   padding-inline: 18px;
   font-size: 0.84rem;
 }
 
-/* The sticky glass header keeps calls-to-action visible without dominating the page. */
+/* Plain corporate header with clear navigation. */
 .site-header {
   position: fixed;
   inset: 0 0 auto;
   z-index: 60;
   border-bottom: 1px solid rgba(220, 230, 237, 0.8);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 8px 36px rgba(3, 31, 61, 0.06);
-  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 3px 18px rgba(3, 31, 61, 0.035);
 }
+
 .nav-link {
   color: #334b5f;
   font-size: 0.88rem;
   font-weight: 700;
   transition: color 160ms ease;
 }
+
 .nav-link:hover {
   color: #0875c9;
 }
+
 .language-pill {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   border: 1px solid #dce6ed;
-  border-radius: 999px;
+  border-radius: 5px;
   padding: 8px 11px;
   color: #8a99a6;
   font-size: 0.72rem;
   font-weight: 800;
 }
+
 .language-pill .active {
   color: #063c73;
 }
 
-/* The mobile menu uses native HTML details for a small and resilient implementation. */
+/* Native details element keeps the mobile menu reliable. */
 .mobile-menu {
   position: relative;
 }
+
 .mobile-menu summary {
   display: grid;
   height: 44px;
@@ -186,32 +211,38 @@ textarea {
   list-style: none;
   place-items: center;
   border: 1px solid #dce6ed;
-  border-radius: 14px;
+  border-radius: 6px;
   color: #063c73;
 }
+
 .mobile-menu summary::-webkit-details-marker {
   display: none;
 }
+
 .mobile-menu .menu-close {
   display: none;
 }
+
 .mobile-menu[open] .menu-open {
   display: none;
 }
+
 .mobile-menu[open] .menu-close {
   display: block;
 }
+
 .mobile-menu-panel {
   position: absolute;
   right: 0;
   top: 58px;
   width: min(330px, calc(100vw - 40px));
   border: 1px solid #dce6ed;
-  border-radius: 22px;
-  background: #fff;
+  border-radius: 8px;
+  background: #ffffff;
   padding: 22px;
   box-shadow: 0 28px 70px rgba(3, 31, 61, 0.18);
 }
+
 .mobile-menu-panel nav a {
   border-bottom: 1px solid #eef3f6;
   padding: 13px 2px;
@@ -219,42 +250,123 @@ textarea {
   font-weight: 750;
 }
 
-/* Hero image overlays protect text contrast on all device sizes. */
-.hero-media::before {
+/* Editorial homepage hero. */
+.home-hero {
+  padding-top: var(--header-height);
+}
+
+.hero-layout {
+  display: grid;
+  min-height: 650px;
+  align-items: stretch;
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 70px 72px 0;
+}
+
+.hero-title {
+  /* Prominent without overwhelming laptop and desktop screens. */
+  max-width: 650px;
+  font-size: clamp(2.25rem, 3.8vw, 3.9rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.hero-title span {
+  color: #ffffff;
+}
+
+.hero-figure {
+  position: relative;
+  min-height: 500px;
+  margin: 40px 0 40px 20px;
+  overflow: hidden;
+  background: #082b4c;
+}
+
+.hero-figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-figure::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(3, 31, 61, 0.99) 0%,
-    rgba(3, 31, 61, 0.91) 42%,
-    rgba(3, 31, 61, 0.28) 78%,
-    rgba(3, 31, 61, 0.12) 100%
-  );
-  z-index: 1;
-}
-.hero-media::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 180px;
-  background: linear-gradient(0deg, #031f3d 0%, transparent 100%);
-  z-index: 1;
-}
-.hero-title {
-  /* Strong but comfortable on laptops and desktop monitors. */
-  font-size: clamp(2.4rem, 5vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.05em;
+  background: linear-gradient(180deg, transparent 62%, rgba(3, 31, 61, 0.48));
 }
 
-/* Decorative grid and orbs establish a technical identity without stock UI effects. */
+.hero-figure figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 18px;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-trust {
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  padding-block: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 1px solid currentColor;
+  padding: 7px 0 5px;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.text-link:hover {
+  color: var(--color-gold);
+}
+
+/* Internal-page introductions. */
+.page-hero {
+  position: relative;
+  padding: 164px 0 86px;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 80px;
+  bottom: 0;
+  width: 6px;
+  background: var(--color-gold);
+}
+
+.page-hero h1 {
+  /* Restrains headings on About, Services, Procurement and Contact. */
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  line-height: 1.08;
+}
+
+/* Optional technical pattern utilities. */
 .blueprint-grid {
   background-image:
     linear-gradient(rgba(127, 211, 243, 0.14) 1px, transparent 1px),
     linear-gradient(90deg, rgba(127, 211, 243, 0.14) 1px, transparent 1px);
   background-size: 34px 34px;
 }
+
 .orb {
   position: absolute;
   height: 360px;
@@ -263,88 +375,151 @@ textarea {
   filter: blur(80px);
   opacity: 0.28;
 }
+
 .orb-blue {
   background: #18a5d8;
 }
+
 .orb-gold {
   background: #f4b400;
 }
 
-/* Cards intentionally use modest movement so the site still feels serious. */
+/* Quiet supporting cards keep content as the visual focus. */
 .service-card {
   position: relative;
   overflow: hidden;
   border: 1px solid #dce6ed;
-  border-radius: 24px;
-  background: #fff;
+  border-radius: 8px;
+  background: #ffffff;
   padding: 28px;
-  box-shadow: 0 12px 40px rgba(3, 31, 61, 0.045);
+  box-shadow: 0 8px 24px rgba(3, 31, 61, 0.035);
   transition:
-    border-color 180ms ease,
-    transform 180ms ease,
-    box-shadow 180ms ease;
+    border-color 160ms ease,
+    box-shadow 160ms ease;
 }
+
 .service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 3px;
-  background: linear-gradient(#18a5d8, #0875c9);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 180ms ease;
+  content: none;
 }
+
 .service-card:hover {
-  transform: translateY(-5px);
-  border-color: #a9d7ed;
-  box-shadow: 0 22px 55px rgba(3, 31, 61, 0.09);
+  border-color: #a9c5d8;
+  box-shadow: 0 12px 30px rgba(3, 31, 61, 0.065);
 }
-.service-card:hover::before {
-  transform: scaleY(1);
-}
+
 .icon-box {
   display: grid;
-  height: 48px;
-  width: 48px;
+  height: 42px;
+  width: 42px;
   place-items: center;
-  border-radius: 15px;
-  background: #eaf4fa;
+  border: 1px solid #cddfe9;
+  border-radius: 5px;
+  background: transparent;
   color: #0875c9;
 }
 
+/* Numbered homepage service ledger. */
+.service-ledger {
+  border-top: 1px solid #b9c9d3;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 20px;
+  border-bottom: 1px solid #d8e1e7;
+  padding: 22px 0;
+}
+
+.service-row h3 {
+  color: var(--color-navy);
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.service-row p {
+  margin-top: 6px;
+  color: var(--color-slate);
+  line-height: 1.65;
+}
+
+.service-index {
+  padding-top: 3px;
+  color: var(--color-blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+/* Process register presents ordered stages without another card grid. */
+.process-register {
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.process-entry {
+  display: grid;
+  grid-template-columns: 48px 150px 1fr;
+  gap: 18px;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 19px 0;
+}
+
+.process-entry > span {
+  color: var(--color-gold);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.process-entry h3 {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.process-entry p {
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.6;
+}
+
+/* Internal-page process timeline. */
 .process-line {
   position: relative;
 }
+
 .process-line::before {
   content: "";
   position: absolute;
-  left: 27px;
+  left: 24px;
   top: 44px;
   bottom: -24px;
   width: 1px;
   background: linear-gradient(#18a5d8, rgba(24, 165, 216, 0.08));
 }
+
 .process-line:last-child::before {
   display: none;
 }
+
 .process-number {
   display: grid;
-  height: 54px;
-  width: 54px;
+  height: 48px;
+  width: 48px;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid rgba(127, 211, 243, 0.28);
-  border-radius: 17px;
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(127, 211, 243, 0.3);
+  border-radius: 5px;
   color: #f4b400;
   font-weight: 900;
 }
 
+/* Existing route line retained for reusable layouts. */
 .route-line {
   position: relative;
   height: 3px;
   background: linear-gradient(90deg, #18a5d8, #f4b400);
 }
+
 .route-line::before,
 .route-line::after {
   content: "";
@@ -353,26 +528,30 @@ textarea {
   height: 16px;
   width: 16px;
   transform: translateY(-50%);
-  border: 4px solid #fff;
+  border: 4px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 0 5px rgba(24, 165, 216, 0.2);
 }
+
 .route-line::before {
   left: 0;
   background: #18a5d8;
 }
+
 .route-line::after {
   right: 0;
   background: #f4b400;
   box-shadow: 0 0 0 5px rgba(244, 180, 0, 0.2);
 }
 
+/* Operational images use restrained framing. */
 .image-frame {
   position: relative;
   overflow: hidden;
-  border-radius: 30px;
-  box-shadow: 0 34px 80px rgba(3, 31, 61, 0.18);
+  border-radius: 6px;
+  box-shadow: 0 18px 50px rgba(3, 31, 61, 0.12);
 }
+
 .image-frame::after {
   content: "";
   position: absolute;
@@ -382,7 +561,136 @@ textarea {
   pointer-events: none;
 }
 
-/* Contact form controls are large enough for comfortable mobile use. */
+/* South Africa–Angola corridor section. */
+.corridor-layout {
+  display: grid;
+  align-items: center;
+  gap: clamp(45px, 7vw, 90px);
+  grid-template-columns: 0.92fr 1.08fr;
+}
+
+.corridor-image {
+  min-height: 510px;
+  overflow: hidden;
+  background: #dfe8ec;
+}
+
+.corridor-image img {
+  display: block;
+  height: 100%;
+  min-height: 510px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.corridor-points {
+  margin-top: 42px;
+  border-top: 1px solid #b9c9d3;
+}
+
+.corridor-points > div {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  border-bottom: 1px solid #d8e1e7;
+  padding: 17px 0;
+}
+
+.corridor-points span {
+  color: var(--color-blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.corridor-points strong {
+  color: var(--color-navy);
+  font-size: 0.92rem;
+}
+
+/* Material categories use dividers instead of floating cards. */
+.sector-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #b9c9d3;
+}
+
+.sector-list > div {
+  border-bottom: 1px solid #d8e1e7;
+  padding: 20px 12px 20px 0;
+  color: var(--color-navy);
+  font-weight: 800;
+}
+
+.sector-list > div:nth-child(odd) {
+  border-right: 1px solid #d8e1e7;
+}
+
+.sector-list > div:nth-child(even) {
+  padding-left: 28px;
+}
+
+/* Commercial model section. */
+.commercial-layout {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+}
+
+.commercial-note {
+  border-left: 4px solid var(--color-gold);
+  background: var(--color-deep-navy);
+  padding: 28px 30px;
+  color: #ffffff;
+}
+
+.commercial-note svg {
+  color: var(--color-gold);
+}
+
+.commercial-note p {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* Corporate document downloads. */
+.document-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #b9c9d3;
+}
+
+.document-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #d8e1e7;
+  padding: 25px 20px 25px 0;
+  color: var(--color-navy);
+}
+
+.document-list a:first-child {
+  border-right: 1px solid #d8e1e7;
+}
+
+.document-list a:last-child {
+  padding-left: 28px;
+}
+
+.document-list a:hover {
+  color: var(--color-blue);
+}
+
+.final-callout,
+.workflow-panel {
+  border-radius: 8px;
+}
+
+/* Contact form controls remain comfortable on mobile. */
 .form-label {
   display: grid;
   gap: 9px;
@@ -390,11 +698,12 @@ textarea {
   font-size: 0.86rem;
   font-weight: 750;
 }
+
 .form-control {
   width: 100%;
   border: 1px solid #cfdde6;
-  border-radius: 15px;
-  background: #fff;
+  border-radius: 5px;
+  background: #ffffff;
   padding: 13px 15px;
   color: #14283a;
   outline: none;
@@ -402,31 +711,34 @@ textarea {
     border-color 160ms ease,
     box-shadow 160ms ease;
 }
+
 .form-control:focus {
   border-color: #0875c9;
   box-shadow: 0 0 0 4px rgba(8, 117, 201, 0.1);
 }
+
 textarea.form-control {
   min-height: 145px;
   resize: vertical;
 }
 
+/* Footer links. */
 .footer-title {
-  color: #fff;
+  color: #ffffff;
   font-size: 0.78rem;
   font-weight: 850;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
+
 .footer-link {
-  transition:
-    color 160ms ease,
-    transform 160ms ease;
+  transition: color 160ms ease;
 }
+
 .footer-link:hover {
-  color: #fff;
-  transform: translateX(3px);
+  color: #ffffff;
 }
+
 .contact-link {
   display: flex;
   align-items: center;
@@ -434,59 +746,70 @@ textarea.form-control {
   color: rgba(255, 255, 255, 0.7);
   transition: color 160ms ease;
 }
+
 .contact-link:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
+/* Compact persistent WhatsApp shortcut. */
 .whatsapp-float {
   position: fixed;
   right: 22px;
   bottom: 22px;
   z-index: 55;
   display: flex;
+  height: 54px;
+  width: 54px;
   align-items: center;
-  gap: 9px;
-  border: 3px solid #fff;
-  border-radius: 999px;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
   background: #20b85a;
-  color: #fff;
-  padding: 12px 17px;
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 850;
-  box-shadow: 0 16px 45px rgba(3, 31, 61, 0.3);
-  transition:
-    transform 180ms ease,
-    background 180ms ease;
+  box-shadow: 0 12px 32px rgba(3, 31, 61, 0.24);
+  transition: background 160ms ease;
 }
+
+.whatsapp-float span {
+  display: none;
+}
+
 .whatsapp-float:hover {
-  transform: translateY(-3px);
   background: #159a48;
 }
 
-/* Soft entrance animation honours reduced-motion accessibility settings. */
+/* Soft entrance movement with reduced-motion support. */
 @keyframes rise-in {
   from {
     opacity: 0;
     transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .rise-in {
   animation: rise-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+
 .delay-1 {
   animation-delay: 100ms;
 }
+
 .delay-2 {
   animation-delay: 200ms;
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -496,23 +819,75 @@ textarea.form-control {
   }
 }
 
+/* Tablet layouts. */
+@media (max-width: 900px) {
+  .hero-layout {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 78px 0 48px;
+  }
+
+  .hero-figure {
+    min-height: 380px;
+    margin: 0 0 28px;
+  }
+
+  .corridor-layout,
+  .commercial-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .corridor-image,
+  .corridor-image img {
+    min-height: 390px;
+  }
+}
+
+/* Mobile layouts. */
 @media (max-width: 720px) {
   .container-shell {
     width: min(100% - 28px, 1180px);
   }
-  .hero-media::before {
-    background: linear-gradient(
-      90deg,
-      rgba(3, 31, 61, 0.98),
-      rgba(3, 31, 61, 0.82)
-    );
-  }
-  .whatsapp-float span {
-    display: none;
-  }
+
   .whatsapp-float {
     right: 14px;
     bottom: 14px;
     padding: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-title {
+    font-size: clamp(2.1rem, 10vw, 2.85rem);
+  }
+
+  .process-entry {
+    grid-template-columns: 38px 1fr;
+  }
+
+  .process-entry p {
+    grid-column: 2;
+  }
+
+  .sector-list,
+  .document-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sector-list > div:nth-child(odd),
+  .document-list a:first-child {
+    border-right: 0;
+  }
+
+  .sector-list > div:nth-child(even),
+  .document-list a:last-child {
+    padding-left: 0;
+  }
+
+  .page-hero {
+    padding: 140px 0 70px;
   }
 }
